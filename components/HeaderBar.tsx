@@ -13,9 +13,7 @@ export default function HeaderBar({ onMenuClick }: { onMenuClick?: () => void })
             Forge & Field
           </Link>
         </div>
-        <nav className='flex items-center gap-2'>
-          <Link href='/' className='card px-3 py-1 hover:opacity-90'>Home</Link>
-        </nav>
+        {/* Right side intentionally empty; title already links Home */}
       </div>
     </header>
   )
