@@ -7,7 +7,7 @@ type Step = { path: string; title: string; body: string[]; selector?: string }
 const steps: Step[] = [
   { path: '/', title: 'Welcome to PLM', selector: '#explore-card', body: [
     'I love how The Legend of Zelda: Breath of the Wild teaches the engineering principles of planning and iteration through play.',
-    'This demo borrows that spirit to make PDM/PLM basics clear and fun.',
+    'This demo borrows that spirit to make PLM basics clear and fun.',
     'PLM (Product Lifecycle Management) keeps items, changes, and history in sync from idea → release.',
   ]},
   {
