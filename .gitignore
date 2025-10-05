@@ -12,6 +12,5 @@ out/
 .env*
 
 # Large map images (use SVG placeholder; drop JPG locally only)
-public/images/quest-map.jpg
-public/images/Overworld-Map-*.jpg
+
 
