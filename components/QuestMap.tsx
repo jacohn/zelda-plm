@@ -317,7 +317,7 @@ export default function QuestMap({ quest, width = 1200, height = 600 }: { quest:
       {/* Tooltip for active stage with word-wrapped lines and task bullets */}
       {(() => {
         const p = pts[active]
-        const title = STEPS[active]
+        const stage = STEPS[active]
         const bodyLines: string[] = [
           ...wrapLine(expl, 44),
           ...tasks.flatMap((t) => wrapLine(`• ${t}`, 44)),
@@ -325,10 +325,11 @@ export default function QuestMap({ quest, width = 1200, height = 600 }: { quest:
         const paddingX = 14
         const paddingY = 14
         const lineH = 16
-        const headerH = 20
+        const headerMainH = 20
+        const subHeaderH = 14
         const contentH = bodyLines.length * lineH
         const boxW = 360
-        const boxH = paddingY * 2 + headerH + 6 + contentH
+        const boxH = paddingY * 2 + headerMainH + subHeaderH + 6 + contentH
         const bx = Math.min(Math.max(20, p.x + 20), width - boxW - 20)
         const by = Math.min(Math.max(20, p.y - boxH - 10), height - boxH - 20)
         return (
@@ -344,13 +345,18 @@ export default function QuestMap({ quest, width = 1200, height = 600 }: { quest:
               stroke='rgba(120,183,195,0.6)'
               strokeWidth={1}
             />
+            {/* Request title */}
             <text x={bx + paddingX} y={by + paddingY + 6} fill='#c9a227' fontSize='14' className='font-display'>
-              {title}
+              {quest.title}
+            </text>
+            {/* Stage name */}
+            <text x={bx + paddingX} y={by + paddingY + headerMainH} fill='#78b7c3' fontSize='12'>
+              Stage: {stage}
             </text>
             {bodyLines.map((ln, i) => (
               <text key={i}
                     x={bx + paddingX}
-                    y={by + paddingY + headerH + 6 + i * lineH}
+                    y={by + paddingY + headerMainH + subHeaderH + 6 + i * lineH}
                     fill='#e8ddc7'
                     fontSize='12'>
                 {ln}
