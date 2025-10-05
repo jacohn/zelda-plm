@@ -1,5 +1,5 @@
 "use client"
-import type { Request } from '@/lib/data'
+import { dataset, type Request } from '@/lib/data'
 import { motion } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import { useGamepad } from '@/hooks/useGamepad'
@@ -29,6 +29,10 @@ function polyline(points: Pt[]) {
 export default function QuestMap({ quest, width = 1200, height = 600 }: { quest: Request; width?: number; height?: number }) {
   const prog = progressFor(quest.status)
   const nextIdx = Math.min(prog, STEPS.length - 1)
+  const itemName = useMemo(() => {
+    const nm = dataset.items.find(i => i.id === quest.linked_item)?.name
+    return nm || 'item'
+  }, [quest.linked_item])
 
   // Seeded RNG so each quest has a distinct, stable region
   function hashSeed(s: string): number {
@@ -97,11 +101,10 @@ export default function QuestMap({ quest, width = 1200, height = 600 }: { quest:
   })
 
   const { expl, tasks } = useMemo(() => {
-    const item = quest.linked_item || 'item'
     const stage = STEPS[active]
     const table: Record<string, { expl: string; tasks: string[] }> = {
       Investigate: {
-        expl: `Confirm the issue and gather evidence on ${item}.`,
+        expl: `Confirm the issue and gather evidence on ${itemName}.`,
         tasks: [
           'Interview origin; collect logs/screenshots',
           'Reproduce; note expected vs actual behavior',

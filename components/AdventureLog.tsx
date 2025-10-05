@@ -1,6 +1,6 @@
 "use client"
 import { dataset, type LogEntry } from '@/lib/data'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 export default function AdventureLog(){
   const [extra, setExtra] = useState<LogEntry[]>([])
@@ -8,11 +8,23 @@ export default function AdventureLog(){
     try { setExtra(JSON.parse(localStorage.getItem('ff_log')||'[]')) } catch {}
   }, [])
   const ordered = [...dataset.adventure_log, ...extra].sort((a,b)=>a.year-b.year)
+  const idMap = useMemo(() => ({
+    items: new Map(dataset.items.map(i => [i.id, i.name])),
+    reqs: new Map(dataset.requests.map(r => [r.id, r.title])),
+    changes: new Map(dataset.changes.map(c => [c.id, c.title])),
+  }), [])
+  const humanize = (s: string) => {
+    let out = s
+    idMap.items.forEach((name, id) => { out = out.replaceAll(id, name) })
+    idMap.reqs.forEach((title, id) => { out = out.replaceAll(id, title) })
+    idMap.changes.forEach((title, id) => { out = out.replaceAll(id, title) })
+    return out
+  }
   return (
     <div id='adventure-log' className='card p-4'>
       <h3 className='font-display text-2xl'>Adventure Log</h3>
       <ol className='mt-4 space-y-2 list-decimal ml-5'>
-        {ordered.map(e=>(<li key={`${e.year}-${e.entry.slice(0,12)}`} className='bg-white/60 text-temple rounded p-2'>Y{e.year}: {e.entry}</li>))}
+        {ordered.map(e=>(<li key={`${e.year}-${e.entry.slice(0,12)}`} className='bg-white/60 text-temple rounded p-2'>Y{e.year}: {humanize(e.entry)}</li>))}
       </ol>
     </div>
   )

@@ -396,7 +396,8 @@ export default function ForgeRitual(){
               <ul className='mt-2 text-sm space-y-1'>
                 {changes.map(c => (
                   <li key={c.id} className='bg-white/60 text-temple rounded p-2'>
-                    <span className='opacity-70'>{c.id}</span> — {c.title} → {c.to_rev}
+                    <span className='font-semibold'>{c.title}</span> → {c.to_rev}
+                    <span className='opacity-70'> • Affected: {dataset.items.find(i=>i.id===c.affected_item)?.name || c.affected_item}</span>
                   </li>
                 ))}
               </ul>

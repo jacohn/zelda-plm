@@ -31,7 +31,7 @@ export default function QuestScreen(){
               onClick={()=>setSelectedId(q.id)}
               className={`card text-left p-3 ${selectedId===q.id?'ring-2 ring-gold':''}`}
             >
-              <div className='text-sm opacity-70'>{q.id} • {q.priority}</div>
+              <div className='text-sm opacity-70'>Linked: {dataset.items.find(i=>i.id===q.linked_item)?.name || 'Unknown'} • {q.priority}</div>
               <div className='font-semibold'>{q.title}</div>
               <div className='text-sm opacity-80 line-clamp-2'>{q.description}</div>
             </motion.button>
