@@ -14,15 +14,15 @@ const steps: Step[] = [
     path: '/inventory',
     title: 'Inventory = Items & Revisions', selector: '#inventory-grid',
     body: [
-      'Browse parts like swords, shields, and tools — each with a revision (Rev A, Rev B…).',
-      'Track suppliers, cost, and health, so teams use the right revision.',
+      'Browse parts like swords, shields, and tools — each with a history of all changes/revisions made to it (Rev A, Rev B…).',
+      'Track suppliers, cost, and health, so teams stay up to date on new decisions.',
     ],
   },
   {
     path: '/quests',
     title: 'Requests = Incoming Work', selector: '#quest-map',
     body: [
-      'Requests collect issues and improvements. Prioritize them and link to affected items.',
+      'Requests collect issues and improvements. Prioritize them, link to affected items, and use them to help you decide what needs changing.',
       'Progress moves through investigate → fix → verify → close.',
     ],
   },
@@ -39,7 +39,7 @@ const steps: Step[] = [
     title: 'Adventure Log = Audit', selector: '#adventure-log',
     body: [
       'Every change leaves breadcrumbs — helpful for compliance and storytelling.',
-      'Record results, share release notes, and keep teams aligned.',
+      'Keep a record of everything so other's can learn from your experience.',
     ],
   },
   {
