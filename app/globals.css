@@ -1,0 +1,32 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-temple text-parchment font-ui; }
+.card { @apply bg-parchment text-temple rounded-2xl shadow-soft border border-rune/30; }
+.title-shadow { text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
+
+/* Zelda‑style glass panel */
+.glass { @apply bg-temple/60 text-parchment rounded-2xl border border-white/10 backdrop-blur; }
+
+/* Inventory tile with bracket corners */
+.tile { @apply relative aspect-square grid place-items-center select-none rounded-xl bg-temple/40 border border-white/10; }
+.tile .corner { @apply pointer-events-none absolute w-3 h-3 border-gold; }
+.tile .corner.tl { @apply top-1 left-1 border-t-2 border-l-2 rounded-tl; }
+.tile .corner.tr { @apply top-1 right-1 border-t-2 border-r-2 rounded-tr; }
+.tile .corner.bl { @apply bottom-1 left-1 border-b-2 border-l-2 rounded-bl; }
+.tile .corner.br { @apply bottom-1 right-1 border-b-2 border-r-2 rounded-br; }
+
+/* Rectangular variant for forge slots (override square) */
+.tile-rect { aspect-ratio: 2 / 1; }
+
+/* Sheikah-slate inspired map background */
+.map-bg {
+  background:
+    /* Darken overlay for contrast */
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    /* Image layers injected via CSS var to support basePath */
+    var(--map-images, none),
+    radial-gradient(circle at 20% 30%, rgba(120,183,195,0.10), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(200,162,39,0.10), transparent 40%),
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px) 0 0/40px 40px,
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px) 0 0/40px 40px,
+    repeating-radial-gradient(circle, rgba(255,255,255,0.07) 0 1px, transparent 1px 10px);
+}

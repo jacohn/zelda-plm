@@ -1,0 +1,196 @@
+{
+  "items": [
+    {
+      "id": "I001",
+      "name": "Master Sword",
+      "type": "weapon",
+      "revision": "Rev A",
+      "description": "Legendary blade, alloy steel",
+      "status": "Active",
+      "supplier": "Blacksmith Guild",
+      "cost": 5000,
+      "health_pct": 40,
+      "notes": "Dulls quickly"
+    },
+    {
+      "id": "I001R2",
+      "name": "Master Sword",
+      "type": "weapon",
+      "revision": "Rev B",
+      "description": "Alloy change to blessed steel",
+      "status": "Active",
+      "supplier": "Sacred Forge",
+      "cost": 7000,
+      "health_pct": 70,
+      "notes": "Stronger but costly"
+    },
+    {
+      "id": "I002",
+      "name": "Hylian Shield",
+      "type": "shield",
+      "revision": "Rev A",
+      "description": "Base iron shield",
+      "status": "Obsolete",
+      "supplier": "Hyrule Smithy",
+      "cost": 200,
+      "health_pct": 20,
+      "notes": "Straps weak"
+    },
+    {
+      "id": "I002R3",
+      "name": "Hylian Shield",
+      "type": "shield",
+      "revision": "Rev C",
+      "description": "Reinforced straps, dragon leather",
+      "status": "Active",
+      "supplier": "Goron Tanners",
+      "cost": 350,
+      "health_pct": 85,
+      "notes": "Durable straps"
+    },
+    {
+      "id": "I003",
+      "name": "Hookshot",
+      "type": "tool",
+      "revision": "Rev A",
+      "description": "Grappling tool, spring-loaded",
+      "status": "Active",
+      "supplier": "Sheikah Engineers",
+      "cost": 1200,
+      "health_pct": 50,
+      "notes": "Springs wear down"
+    },
+    { "id": "M101", "name": "Dragon Leather", "type": "material", "revision": "Rev A", "description": "Tough hide from ancient drakes", "status": "Active", "supplier": "Goron Tanners", "cost": 120, "health_pct": 0, "notes": "Heat-treated" },
+    { "id": "M102", "name": "Blessed Steel Ingot", "type": "material", "revision": "Rev A", "description": "Steel sanctified by temple rites", "status": "Active", "supplier": "Sacred Forge", "cost": 300, "health_pct": 0, "notes": "High purity" },
+    { "id": "M102B", "name": "Sanctified Alloy Ingot", "type": "material", "revision": "Rev A", "description": "Consecrated alloy for sanctified tempering", "status": "Active", "supplier": "Sacred Forge", "cost": 320, "health_pct": 0, "notes": "Sanctified alloy" },
+    { "id": "M103", "name": "Alloy Spring", "type": "component", "revision": "Rev A", "description": "High-tension spring of rare alloy", "status": "Active", "supplier": "Sheikah Engineers", "cost": 90, "health_pct": 0, "notes": "Resilient" },
+    { "id": "M104", "name": "Swift Feather", "type": "material", "revision": "Rev A", "description": "Lightweight feather for speed", "status": "Active", "supplier": "Aerie Traders", "cost": 40, "health_pct": 0, "notes": "Airy" },
+    { "id": "M105", "name": "Fire Crystal", "type": "material", "revision": "Rev A", "description": "Crystal that radiates warmth", "status": "Active", "supplier": "Volcano Miners", "cost": 180, "health_pct": 0, "notes": "Fiery" },
+    { "id": "M106", "name": "Frost Crystal", "type": "material", "revision": "Rev A", "description": "Crystal that chills the air", "status": "Active", "supplier": "Ice Quarry", "cost": 170, "health_pct": 0, "notes": "Frigid" },
+    { "id": "M107", "name": "Thunder Core", "type": "component", "revision": "Rev A", "description": "Compact capacitor of storm energy", "status": "Active", "supplier": "Skywrights", "cost": 210, "health_pct": 0, "notes": "Conductive" },
+    { "id": "M108", "name": "Sunshard Crystal", "type": "material", "revision": "Rev A", "description": "Radiant shard with solar charge", "status": "Active", "supplier": "Desert Delvers", "cost": 160, "health_pct": 0, "notes": "Bright" },
+    { "id": "M109", "name": "Nightshade Resin", "type": "material", "revision": "Rev A", "description": "Dark resin, dampens vibration", "status": "Active", "supplier": "Duskmire Gatherers", "cost": 75, "health_pct": 0, "notes": "Damping" },
+    { "id": "M110", "name": "Obsidian Chunk", "type": "material", "revision": "Rev A", "description": "Glossy volcanic glass shard", "status": "Active", "supplier": "Volcano Miners", "cost": 95, "health_pct": 0, "notes": "Hard" },
+    { "id": "M111", "name": "Mithril Ingot", "type": "material", "revision": "Rev A", "description": "Rare, light metal bar", "status": "Active", "supplier": "Deepforge", "cost": 400, "health_pct": 0, "notes": "Resilient" },
+    { "id": "M112", "name": "Dragon Scale", "type": "material", "revision": "Rev A", "description": "Armored scale from a wyrm", "status": "Active", "supplier": "Goron Tanners", "cost": 220, "health_pct": 0, "notes": "Protective" },
+    { "id": "M113", "name": "Phoenix Ash", "type": "material", "revision": "Rev A", "description": "Ash imbued with rebirth heat", "status": "Active", "supplier": "Ashen Alchemists", "cost": 260, "health_pct": 0, "notes": "Kindled" },
+    { "id": "M114", "name": "Wind Gem", "type": "material", "revision": "Rev A", "description": "Gem humming with wind", "status": "Active", "supplier": "Skywrights", "cost": 150, "health_pct": 0, "notes": "Light" },
+    { "id": "M115", "name": "Water Pearl", "type": "material", "revision": "Rev A", "description": "Pearl slick with water magic", "status": "Active", "supplier": "Riverfolk", "cost": 140, "health_pct": 0, "notes": "Slick" },
+    { "id": "M116", "name": "Rune Capacitor", "type": "component", "revision": "Rev A", "description": "Stores arcane charge for tools", "status": "Active", "supplier": "Sheikah Engineers", "cost": 180, "health_pct": 0, "notes": "Runic" },
+    { "id": "M117", "name": "Silk String", "type": "component", "revision": "Rev A", "description": "Fine silk string for precise bows", "status": "Active", "supplier": "Aerie Traders", "cost": 35, "health_pct": 0, "notes": "Silk string" },
+    { "id": "M118", "name": "Hardwood Grip", "type": "component", "revision": "Rev A", "description": "Shaped hardwood bow grip", "status": "Active", "supplier": "Highland Woodworks", "cost": 55, "health_pct": 0, "notes": "Hardwood grip" },
+    { "id": "M119", "name": "Quenching Oil", "type": "material", "revision": "Rev A", "description": "Oil for deep blade quench", "status": "Active", "supplier": "Desert Delvers", "cost": 28, "health_pct": 0, "notes": "Quenching oil" },
+    { "id": "M120", "name": "Tempered Rivet Pack", "type": "component", "revision": "Rev A", "description": "Heat-tempered rivets for shields", "status": "Active", "supplier": "Blacksmith Guild", "cost": 24, "health_pct": 0, "notes": "Tempered rivet" },
+    { "id": "M121", "name": "Mirror Polish", "type": "material", "revision": "Rev A", "description": "High specular polish compound", "status": "Active", "supplier": "Riverfolk", "cost": 18, "health_pct": 0, "notes": "Mirror polish" },
+    { "id": "M122", "name": "Resonance Crystal", "type": "material", "revision": "Rev A", "description": "Crystal tuned for arcane resonance", "status": "Active", "supplier": "Arcane Collegium", "cost": 130, "health_pct": 0, "notes": "Resonance crystal" },
+    { "id": "G201", "name": "Longbow", "type": "weapon", "revision": "Rev A", "description": "Tall bow with strong draw", "status": "Active", "supplier": "Aerie Traders", "cost": 350, "health_pct": 55, "notes": "Stable arc" },
+    { "id": "G202", "name": "Mage Staff", "type": "tool", "revision": "Rev A", "description": "Staff for channeling energy", "status": "Active", "supplier": "Arcane Collegium", "cost": 800, "health_pct": 60, "notes": "Focus crystal" },
+    { "id": "G203", "name": "Travel Boots", "type": "gear", "revision": "Rev A", "description": "Leather boots for long treks", "status": "Active", "supplier": "Highland Cobblers", "cost": 120, "health_pct": 40, "notes": "Worn soles" }
+  ],
+  "requests": [
+    {
+      "id": "R101",
+      "title": "Villagers complain straps breaking",
+      "description": "Shields failing during patrol",
+      "origin": "Villager Council",
+      "priority": "High",
+      "linked_item": "I002",
+      "status": "Closed"
+    },
+    {
+      "id": "R102",
+      "title": "Sword dulls too fast",
+      "description": "Alloy not holding edge",
+      "origin": "Royal Guard",
+      "priority": "High",
+      "linked_item": "I001",
+      "status": "Closed"
+    },
+    {
+      "id": "R103",
+      "title": "Hookshot spring weak",
+      "description": "Soldiers stuck mid-mission",
+      "origin": "Field Scouts",
+      "priority": "Medium",
+      "linked_item": "I003",
+      "status": "Open"
+    },
+    {
+      "id": "R104",
+      "title": "Demand for lighter shields",
+      "description": "Guards request faster mobility",
+      "origin": "Guard Captain",
+      "priority": "Medium",
+      "linked_item": "I002",
+      "status": "Open"
+    }
+  ],
+  "changes": [
+    {
+      "id": "C001",
+      "type": "ECO",
+      "title": "Reinforce shield straps",
+      "description": "Add leather reinforcement",
+      "affected_item": "I002",
+      "from_rev": "Rev A",
+      "to_rev": "Rev B",
+      "rationale": "Respond to ticket R101",
+      "status": "Completed"
+    },
+    {
+      "id": "C002",
+      "type": "ECO",
+      "title": "Alloy upgrade for Master Sword",
+      "description": "Switch to blessed steel",
+      "affected_item": "I001",
+      "from_rev": "Rev A",
+      "to_rev": "Rev B",
+      "rationale": "Respond to ticket R102",
+      "status": "Completed"
+    },
+    {
+      "id": "C003",
+      "type": "Variant",
+      "title": "Dragon leather shield straps",
+      "description": "Strap variant using dragon leather",
+      "affected_item": "I002",
+      "from_rev": "Rev B",
+      "to_rev": "Rev C",
+      "rationale": "Strengthen durability further",
+      "status": "Completed"
+    },
+    {
+      "id": "C004",
+      "type": "ECO",
+      "title": "Hookshot spring replacement",
+      "description": "Stronger Sheikah alloy springs",
+      "affected_item": "I003",
+      "from_rev": "Rev A",
+      "to_rev": "Rev B",
+      "rationale": "Respond to ticket R103",
+      "status": "Proposed"
+    }
+  ],
+  "adventure_log": [
+    {
+      "year": 1,
+      "entry": "Villagers reported straps breaking (R101). ECO C001 reinforced straps \u2192 Hylian Shield Rev B."
+    },
+    {
+      "year": 2,
+      "entry": "Royal Guard complained Master Sword dulls (R102). ECO C002 upgraded alloy \u2192 Master Sword Rev B."
+    },
+    {
+      "year": 3,
+      "entry": "Goron Tanners introduced dragon leather (C003). Hylian Shield Rev C created."
+    },
+    {
+      "year": 4,
+      "entry": "Scouts noted Hookshot failure in caves (R103). ECO C004 proposed spring alloy upgrade (pending)."
+    },
+    {
+      "year": 5,
+      "entry": "Guard Captain requested lighter shield variant (R104). Awaiting design."
+    }
+  ]
+}
