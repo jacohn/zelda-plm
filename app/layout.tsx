@@ -1,4 +1,5 @@
 import './globals.css'
+import React from 'react'
 import InputRouter from '@/components/InputRouter'
 import Shell from '@/components/Shell'
 export const metadata = { title: 'Forge & Field', description: 'Zelda-inspired PLM demo' }
@@ -8,7 +9,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }){
     <html lang='en'>
       <body style={{ ['--map-images' as any]: `url(${BASE}/images/quest-map.jpg) center/cover no-repeat, url(${BASE}/images/quest-map.svg) center/cover no-repeat` }}>
         <InputRouter/>
-        <Shell>{children}</Shell>
+        <React.Suspense fallback={<div/>}>
+          <Shell>{children}</Shell>
+        </React.Suspense>
       </body>
     </html>
   )

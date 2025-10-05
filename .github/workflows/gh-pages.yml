@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
@@ -56,4 +56,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify deployment
+        if: success()
+        run: |
+          echo "Checking deployed site: ${{ steps.deployment.outputs.page_url }}"
+          URL=${{ steps.deployment.outputs.page_url }}
+          # Retry for up to ~60s
+          for i in {1..12}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL") || true
+            echo "Attempt $i: HTTP $STATUS"
+            if [ "$STATUS" = "200" ]; then
+              echo "Site is up"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Deployment check failed: site did not return HTTP 200"
+          exit 1
 

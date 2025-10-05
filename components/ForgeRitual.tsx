@@ -134,16 +134,19 @@ export default function ForgeRitual(){
   }
 
   // Drag & drop support
-  const onDragStartItem = (e: React.DragEvent, it: Item) => {
-    e.dataTransfer.setData('text/plain', it.id)
+  // Framer Motion and different input paths can make the event type ambiguous; accept any and cast.
+  const onDragStartItem = (e: any, it: Item) => {
+    const ev = e as React.DragEvent
+    try { ev.dataTransfer?.setData('text/plain', it.id) } catch {}
   }
-  const onDropIntoSlot = (e: React.DragEvent) => {
-    e.preventDefault()
-    const id = e.dataTransfer.getData('text/plain')
+  const onDropIntoSlot = (e: any) => {
+    const ev = e as React.DragEvent
+    ev.preventDefault?.()
+    const id = ev.dataTransfer?.getData?.('text/plain')
     const it = inventory.find(i => i.id === id)
     if (it) addToPot(it)
   }
-  const onDragOver = (e: React.DragEvent) => { e.preventDefault() }
+  const onDragOver = (e: any) => { e.preventDefault?.() }
 
   // Gamepad focus and actions
   type FocusArea = 'inventory' | 'pot' | 'forge'

@@ -4,7 +4,6 @@ const repo = process.env.GITHUB_REPOSITORY?.split('/')?.[1]
 const base = isGh && repo ? `/${repo}` : ''
 
 export default {
-  experimental: { appDir: true },
   output: 'export',
   trailingSlash: true,
   basePath: base,
